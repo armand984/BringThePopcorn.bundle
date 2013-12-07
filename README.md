@@ -6,8 +6,8 @@ This is the Plex channel for www.bringthepopcorn.net
 Installation
 ======================
 
-1. Download the latest **BringThePopcorn.bundle**
-2. Put the **BringThePopcorn.bundle** in your Plex Media Server plugins directory
+1. Download the latest **BringThePopcorn.bundle** [[here]](https://github.com/MaZZly/BringThePopcorn.bundle/archive/master.zip)
+2. Put the **BringThePopcorn.bundle** in your Plex Media Server plugins directory (**Check naming!**)
  - **Linux:** `/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-ins`
  - **OSX:** `~/Library/Application Support/Plex Media Server/Plug-ins`
  - **Windows:** `C:\Documents and Settings\ **[username]**\Local Settings\Application Data\Plex Media Server\Plug-ins`
