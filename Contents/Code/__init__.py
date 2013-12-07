@@ -92,28 +92,28 @@ def AllMovies(title, page=1):
 def NewlyAdded(title, page=1):
     oc = ObjectContainer( title2=title )
 
-    for movie in getMoviesFromJsonURL( PLEX_URL+'?o=-created', NewlyAdded ):
+    for movie in getMoviesFromJsonURL( PLEX_URL+'?o=-created&p=%s'%page, NewlyAdded ):
         oc.add( movie )
     return oc
 
 @route( PREFIX+'/bestrating' )
 def BestRating(title, page=1):
     oc = ObjectContainer( title2=title )
-    for movie in getMoviesFromJsonURL( PLEX_URL+'?o=-rating', BestRating ):
+    for movie in getMoviesFromJsonURL( PLEX_URL+'?o=-rating&p=%s'%page, BestRating ):
         oc.add( movie )
     return oc
 
 @route( PREFIX+'/popular/today' )
 def PopularToday(title, page=1):
     oc = ObjectContainer( title2=title )
-    for movie in getMoviesFromJsonURL( PLEX_URL+'?o=-popularity_day', PopularToday ):
+    for movie in getMoviesFromJsonURL( PLEX_URL+'?o=-popularity_day&p=%s'%page, PopularToday ):
         oc.add( movie )
     return oc
 
 @route( PREFIX+'/popular/week' )
 def PopularWeek(title, page=1):
     oc = ObjectContainer( title2=title )
-    for movie in getMoviesFromJsonURL( PLEX_URL+'?o=-popularity_week', PopularWeek ):
+    for movie in getMoviesFromJsonURL( PLEX_URL+'?o=-popularity_week&p=%s'%page, PopularWeek ):
         oc.add( movie )
     return oc
 
